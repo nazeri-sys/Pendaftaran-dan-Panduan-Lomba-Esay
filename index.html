@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Lomba Esai Nasional 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
+                    <i class="fa-solid fa-pen-nib text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">EsaiNasional</span>
+                    <span class="block text-xs text-slate-500 font-medium">Kompetisi Menulis 2026</span>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <!-- LINK GUIDEBOOK: Ubah href="#" di bawah dengan link Google Drive / PDF Guidebook Anda -->
+                <a href="#" id="nav-guidebook-btn" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 rounded-xl transition">
+                    <i class="fa-solid fa-book-open mr-2"></i> Guidebook
+                </a>
+                <!-- LINK PENDAFTARAN: Ubah href="#" di bawah dengan link Google Form / Web Pendaftaran Anda -->
+                <a href="#" id="nav-register-btn" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/20 transition transform active:scale-95">
+                    <i class="fa-solid fa-rocket mr-2"></i> Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-16 md:py-24 flex-grow flex items-center bg-gradient-to-b from-indigo-50/50 via-white to-slate-50">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),transparent)] opacity-60"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+                <span class="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+                Pendaftaran Lomba Esai Nasional 2026
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+                Akses <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Link Pendaftaran</span> & <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Guidebook</span> Resmi
+            </h1>
+
+            <p class="mt-4 text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+                Silakan unduh panduan penulisan atau langsung menuju formulir pendaftaran melalui tombol di bawah ini.
+            </p>
+
+            <!-- CTA Buttons for Links -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <!-- LINK PENDAFTARAN UTAMA -->
+                <a href="#" id="hero-register-btn" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-xl shadow-indigo-600/25 transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-file-arrow-up mr-2 text-lg"></i> Link Pendaftaran
+                </a>
+                <!-- LINK GUIDEBOOK UTAMA -->
+                <a href="#" id="hero-guidebook-btn" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-2xl shadow-sm transition">
+                    <i class="fa-solid fa-download mr-2 text-indigo-600 text-lg"></i> Download Guidebook
+                </a>
+            </div>
+
+            <!-- Countdown Timer Card -->
+            <div class="mt-12 max-w-lg mx-auto bg-white/80 backdrop-blur border border-slate-200 rounded-3xl p-6 shadow-xl shadow-slate-200/50">
+                <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Periode Pendaftaran & Pengumpulan Karya</p>
+                <p class="text-sm font-bold text-indigo-600 mb-4">19 Oktober - 5 November 2026</p>
+                <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+                    <div class="bg-indigo-50 rounded-2xl p-3">
+                        <span id="days" class="block text-2xl font-bold text-indigo-600">00</span>
+                        <span class="text-xs text-slate-500 font-medium">Hari</span>
+                    </div>
+                    <div class="bg-indigo-50 rounded-2xl p-3">
+                        <span id="hours" class="block text-2xl font-bold text-indigo-600">00</span>
+                        <span class="text-xs text-slate-500 font-medium">Jam</span>
+                    </div>
+                    <div class="bg-indigo-50 rounded-2xl p-3">
+                        <span id="minutes" class="block text-2xl font-bold text-indigo-600">00</span>
+                        <span class="text-xs text-slate-500 font-medium">Menit</span>
+                    </div>
+                    <div class="bg-indigo-50 rounded-2xl p-3">
+                        <span id="seconds" class="block text-2xl font-bold text-indigo-600">00</span>
+                        <span class="text-xs text-slate-500 font-medium">Detik</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instruction Box -->
+            <div class="mt-8 max-w-lg mx-auto p-4 bg-amber-50 border border-amber-200 rounded-2xl text-xs text-amber-800 text-left flex items-start space-x-3">
+                <i class="fa-solid fa-circle-info text-amber-600 text-base mt-0.5 flex-shrink-0"></i>
+                <div>
+                    <span class="font-semibold">Cara Mengganti Link:</span> Ubah variabel <code class="bg-amber-100 px-1 py-0.5 rounded text-amber-900 font-mono">LINK_PENDAFTARAN</code> dan <code class="bg-amber-100 px-1 py-0.5 rounded text-amber-900 font-mono">LINK_GUIDEBOOK</code> di bagian kode JavaScript bawah file ini.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-xs text-slate-500">
+                &copy; 2026 Lomba Esai Nasional. Seluruh hak cipta dilindungi.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        /* 
+          ========================================================================
+          KONFIGURASI LINK UTAMA (LINK ANDA SUDAH DIPASANG)
+          ========================================================================
+        */
+        const LINK_PENDAFTARAN = "https://docs.google.com/forms/d/e/1FAIpQLSf3ZeqIo9B7-gbvUG8j9zMMjHGR88dwhYdXm19g8kt4mQRUhA/viewform?usp=publish-editor";
+        const LINK_GUIDEBOOK   = "https://drive.google.com/drive/folders/1aHsWbI8TSAzZor1yzJnKp3K52KUv6QGb?usp=sharing";
+
+        // Memasang link secara otomatis ke seluruh tombol yang relevan
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerButtons = [
+                document.getElementById('nav-register-btn'),
+                document.getElementById('hero-register-btn')
+            ];
+
+            const guidebookButtons = [
+                document.getElementById('nav-guidebook-btn'),
+                document.getElementById('hero-guidebook-btn')
+            ];
+
+            registerButtons.forEach(btn => {
+                if(btn) btn.href = LINK_PENDAFTARAN;
+            });
+
+            guidebookButtons.forEach(btn => {
+                if(btn) btn.href = LINK_GUIDEBOOK;
+            });
+        });
+
+        /* Countdown Timer Logic */
+        const deadline = new Date("November 5, 2026 23:59:59").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-center font-bold text-red-500 py-2'>Pendaftaran Telah Ditutup</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
+
+```
