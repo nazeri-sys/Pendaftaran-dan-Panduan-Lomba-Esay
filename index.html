@@ -30,10 +30,10 @@
             </div>
             
             <div class="flex items-center space-x-3">
-                <a href="#" id="nav-guidebook-btn" target="_blank" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">
+                <a href="https://drive.google.com/drive/folders/1aHsWbI8TSAzZor1yzJnKp3K52KUv6QGb?usp=sharing" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">
                     <i class="fa-solid fa-download mr-2 text-indigo-600"></i> Guidebook
                 </a>
-                <a href="#" id="nav-register-btn" target="_blank" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/25 transition transform hover:-translate-y-0.5">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3ZeqIo9B7-gbvUG8j9zMMjHGR88dwhYdXm19g8kt4mQRUhA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-lg shadow-indigo-600/25 transition transform hover:-translate-y-0.5">
                     <i class="fa-solid fa-pen-to-square mr-2"></i> Daftar Sekarang
                 </a>
             </div>
@@ -60,18 +60,17 @@
                     <p class="text-lg sm:text-xl font-bold tracking-tight text-amber-300">Math for Blue Future: Inovasi Generasi Muda untuk Laut Indonesia</p>
                 </div>
 
-                <!-- CTA Buttons -->
+                <!-- CTA Buttons with direct href to avoid modal/redirection issues -->
                 <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#" id="hero-register-btn" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-xl shadow-indigo-600/25 transition transform hover:-translate-y-0.5">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3ZeqIo9B7-gbvUG8j9zMMjHGR88dwhYdXm19g8kt4mQRUhA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-xl shadow-indigo-600/25 transition transform hover:-translate-y-0.5">
                         <i class="fa-solid fa-file-arrow-up mr-2 text-lg"></i> Link Pendaftaran
                     </a>
-                    <a href="#" id="hero-guidebook-btn" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-2xl shadow-sm transition">
+                    <a href="https://drive.google.com/drive/folders/1aHsWbI8TSAzZor1yzJnKp3K52KUv6QGb?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-2xl shadow-sm transition">
                         <i class="fa-solid fa-download mr-2 text-indigo-600 text-lg"></i> Download Guidebook
                     </a>
                 </div>
             </div>
 
-            <!-- Grid Konten Tambahan (Subtema, Timeline, Ketentuan) -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
                 
                 <!-- Kolom Kiri: Subtema & Ketentuan Khusus -->
@@ -239,7 +238,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold text-xs text-slate-300">Miftakhul Insyirah</p>
-                                    <a href="https://wa.me/6289620201324" target="_blank" class="font-bold text-white hover:underline">0896-2020-1324</a>
+                                    <a href="https://wa.me/6289620201324" target="_blank" rel="noopener noreferrer" class="font-bold text-white hover:underline">0896-2020-1324</a>
                                 </div>
                             </div>
 
@@ -249,7 +248,7 @@
                                 </div>
                                 <div>
                                     <p class="font-semibold text-xs text-slate-300">Nabela Gusti Amanda</p>
-                                    <a href="https://wa.me/6281262861023" target="_blank" class="font-bold text-white hover:underline">0812-6286-1023</a>
+                                    <a href="https://wa.me/6281262861023" target="_blank" rel="noopener noreferrer" class="font-bold text-white hover:underline">0812-6286-1023</a>
                                 </div>
                             </div>
                         </div>
@@ -270,33 +269,37 @@
     </footer>
 
     <script>
-        /* 
-          ========================================================================
-          KONFIGURASI LINK UTAMA (LINK ANDA SUDAH DIPASANG)
-          ========================================================================
-        */
-        const LINK_PENDAFTARAN = "https://docs.google.com/forms/d/e/1FAIpQLSf3ZeqIo9B7-gbvUG8j9zMMjHGR88dwhYdXm19g8kt4mQRUhA/viewform?usp=publish-editor";
-        const LINK_GUIDEBOOK   = "https://drive.google.com/drive/folders/1aHsWbI8TSAzZor1yzJnKp3K52KUv6QGb?usp=sharing";
+        /* Countdown Timer Logic with Real-time Updates */
+        const deadline = new Date("November 5, 2026 23:59:59").getTime();
 
-        // Memasang link secara otomatis ke seluruh tombol yang relevan
-        document.addEventListener('DOMContentLoaded', () => {
-            const registerButtons = [
-                document.getElementById('nav-register-btn'),
-                document.getElementById('hero-register-btn')
-            ];
+        const updateCountdown = function() {
+            const now = new Date().getTime();
+            const distance = deadline - now;
 
-            const guidebookButtons = [
-                document.getElementById('nav-guidebook-btn'),
-                document.getElementById('hero-guidebook-btn')
-            ];
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-center font-bold text-red-500 py-2'>Pendaftaran Telah Ditutup</div>";
+                return;
+            }
 
-            registerButtons.forEach(btn => {
-                if(btn) btn.href = LINK_PENDAFTARAN;"https://docs.google.com/forms/d/e/1FAIpQLSf3ZeqIo9B7-gbvUG8j9zMMjHGR88dwhYdXm19g8kt4mQRUhA/viewform?usp=publish-editor";
-            });
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            guidebookButtons.forEach(btn => {
-                if(btn) btn.href = LINK_GUIDEBOOK;"https://drive.google.com/drive/folders/1aHsWbI8TSAzZor1yzJnKp3K52KUv6QGb?usp=sharing";
-            });
-        });
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        };
 
-     
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
+```
